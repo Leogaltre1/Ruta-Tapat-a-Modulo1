@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,209;1,209&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+//Execute
+/*
+cd /scss/compiler
+./scss2css.sh
+*/
+
+// font family
+$font-family-1: "Kanit";
+$font-family-2: "Montserrat", sans-serif;
+
+//font size
+$anchor: 1.3rem;
+$margin: 2rem;
+$title: 4em;
+
+// color
+$rosa-mx: #e4007c;
+$font-color-1: white;
+$bold-letter: 600;
+
+// background templates
+$bg-transparent-1: rgba(0, 0, 0, 0.2);
+$bg-transparent-2: rgba(0,0,0,2);
+
+//
+$text-shadow-1: 2px 2px 4px $bg-transparent-2;
+
+//
+$height-navbar: 6rem;
+$height-card: 20rem;

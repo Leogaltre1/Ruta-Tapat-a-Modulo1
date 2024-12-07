@@ -6,26 +6,12 @@ cd /scss/compiler
 */
 /* Repeated Selector */
 
+/* Configuracion General */
 * {
-    @include mix.mp-0;
-    font-family: var.$font-family-1;
     color: var.$font-color-1;
+    font-family: var.$font-family-1;
 }
-/* Para el fondo de la landingpage */
-#background {
-    position: relative;
-    width: 100%;
-    height: 100vh; /*- 100% de la altura de la ventana */
-    
-    > img {
-        position: absolute;
-    top: 0;
-    left: 0;
-    @include mix.wh-100;
-    object-fit: cover; /*- Mantiene la proporción de la imagen y la ajusta al contenedor */
-    z-index: -1; /*- Coloca la imagen detrás del contenido */
-    }
-}
+
 /* Para la configuracion de la Navbar */
 header{
     width: 100%;
@@ -67,22 +53,52 @@ li a {
     font-weight: var.$bold-letter;
     text-shadow: var.$text-shadow-1;
 }
-/* Frase Central */
+
+/* Main */
 main {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: calc(100vh);
-    top: 0;       /*- Asegúrate de que esté alineado desde la parte superior */
-    left: 0;      /*- Asegúrate de que esté alineado desde la izquierda */
-    z-index: 1;
+    padding-top: var.$height-navbar;
 
     > h1 {
-        font-family: var.$font-family-1;
-        font-size: 6em;
-        font-weight: var.$bold-letter;
-        text-shadow: var.$text-shadow-1;
+        left: 4rem;
+        font-size: var.$title;
+        font-family: var.$font-family-2;
+        display: flex;
+        justify-content: center;
     }
+}
+
+/* Secciones */
+.card {
+    @include mix.mp-0;
+    display: grid;
+    height: var.$height-card;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+}
+.image-look {
+    @include mix.wh-100;
+    grid-column: 1/2; 
+    grid-row: 1/2; 
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    background-color: gold;
+
+    > div {
+        @include mix.wh-100;
+        display: flex;
+        justify-content: center;
+        background-color: grey;
+
+        > img {
+            @include mix.wh-100;
+            object-fit: cover;
+        }
+    }
+}
+.descrition {
+    grid-column: 2/3; 
+    grid-row: 1/2; 
+    background-color: aqua;
 }
