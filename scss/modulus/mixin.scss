@@ -1,0 +1,22 @@
+/* Repeated Selector */
+
+//space container
+// @include mix.wh-100;
+@mixin wh-100 {
+    width: 100%;
+    height: 100%;
+}
+@mixin wh-80 {
+    width: 80%;
+    height: 80%;
+}
+@mixin wh-50 {
+    width: 50%;
+    height: 50%;
+}
+
+//
+@mixin mp-0 {
+    margin: 0;
+    padding: 0;
+}
